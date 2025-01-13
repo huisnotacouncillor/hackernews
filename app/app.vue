@@ -20,13 +20,40 @@ useSeoMeta({
 </template>
 
 <style lang="postcss">
+:root {
+  /* Color System */
+  --primary: #00DC82;
+  --primary-light: #B4F4D9;
+  --secondary: #020420;
+  --bg-main: #F4F4F5;
+  --bg-card: #FFFFFF;
+  --text-primary: #020420;
+  --text-secondary: #6B7280;
+  
+  /* Spacing System */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-lg: 12px;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
-  background-color: #F4F4F5;
+  background-color: var(--bg-main);
   margin: 0;
   padding: 0;
-  color: #020420;
+  color: var(--text-primary);
   overflow-y: scroll;
 }
 
@@ -35,7 +62,7 @@ a {
   text-decoration: none;
 }
 .header {
-  background-color: #020420;
+  background-color: var(--secondary);
   z-index: 999;
   height: 55px;
 
@@ -43,27 +70,27 @@ a {
     max-width: 800px;
     box-sizing: border-box;
     margin: 0px auto;
-    padding: 12px 5px;
+    padding: var(--space-sm) var(--space-xs);
     display: flex;
     place-items: center;
   }
 
   & a {
-    color: #fff;
+    color: var(--bg-card);
     line-height: 24px;
     transition: color 0.15s ease;
     display: inline-block;
     vertical-align: middle;
     font-weight: 300;
     letter-spacing: 0.075em;
-    margin-right: 1.8em;
+    margin-right: var(--space-lg);
 
     &:hover {
-      color: #00DC82;
+      color: var(--primary);
     }
 
     &.active {
-      color: #00DC82;
+      color: var(--primary);
     }
 
     &:nth-child(6) {
